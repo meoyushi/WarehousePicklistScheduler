@@ -1,0 +1,241 @@
+{
+  "timestamp": "2025-12-23T16:08:13.906241",
+  "processing_date": "2025-12-08",
+  "primary_metrics": {
+    "total_units_picked_on_time": 11501,
+    "total_units_picked": 226125,
+    "units_late": 214624,
+    "effectiveness_rate": 0.0508612493090105,
+    "effectiveness_percentage": "5.09%"
+  },
+  "order_completion": {
+    "complete_orders": 30,
+    "partial_orders": 1,
+    "incomplete_orders": 375,
+    "total_orders_processed": 406,
+    "order_completion_rate": 0.07389162561576355,
+    "order_completion_percentage": "7.39%"
+  },
+  "wasted_effort": {
+    "wasted_picklists": 311,
+    "wasted_units": 214624,
+    "wasted_weight_kg": 54287.11,
+    "waste_rate_picklists": 0.7974358974358975,
+    "waste_rate_units": 0.9491387506909895,
+    "waste_percentage": "94.91%"
+  },
+  "picker_utilization": {
+    "active_pickers": 80,
+    "total_pickers": 80,
+    "picker_activation_rate": 1.0,
+    "avg_utilization": 1.0,
+    "min_utilization": 1.0,
+    "max_utilization": 1.0,
+    "std_utilization": 0.0,
+    "utilization_percentage": "100.00%",
+    "shift_breakdown": {
+      "Night Shift 1": {
+        "avg_utilization": 1.0,
+        "active_pickers": 45,
+        "total_picklists": 207
+      },
+      "Night Shift 2": {
+        "avg_utilization": 1.0,
+        "active_pickers": 35,
+        "total_picklists": 183
+      }
+    }
+  },
+  "scalability": {
+    "total_picklists_created": 390,
+    "total_processing_time_minutes": 718.5,
+    "avg_picklist_duration_minutes": 116.53,
+    "throughput_units_per_hour": 18883.0,
+    "throughput_picklists_per_hour": 32.57
+  },
+  "zone_breakdown": {
+    "zone_metrics": {
+      "combo_9": {
+        "picklists": 55,
+        "total_units": 84799,
+        "on_time_units": 233,
+        "effectiveness": 0.0027
+      },
+      "combo_11": {
+        "picklists": 26,
+        "total_units": 41096,
+        "on_time_units": 0,
+        "effectiveness": 0.0
+      },
+      "combo_8": {
+        "picklists": 55,
+        "total_units": 30606,
+        "on_time_units": 304,
+        "effectiveness": 0.0099
+      },
+      "CICO_G2": {
+        "picklists": 15,
+        "total_units": 26457,
+        "on_time_units": 680,
+        "effectiveness": 0.0257
+      },
+      "DL+CL": {
+        "picklists": 20,
+        "total_units": 5380,
+        "on_time_units": 335,
+        "effectiveness": 0.0623
+      },
+      "STAPLES": {
+        "picklists": 50,
+        "total_units": 19978,
+        "on_time_units": 563,
+        "effectiveness": 0.0282
+      },
+      "CICO_FD": {
+        "picklists": 22,
+        "total_units": 5093,
+        "on_time_units": 550,
+        "effectiveness": 0.108
+      },
+      "SPICES&DAL": {
+        "picklists": 2,
+        "total_units": 146,
+        "on_time_units": 70,
+        "effectiveness": 0.4795
+      },
+      "FMCG_FOOD1": {
+        "picklists": 1,
+        "total_units": 78,
+        "on_time_units": 0,
+        "effectiveness": 0.0
+      },
+      "H_STAPLES": {
+        "picklists": 58,
+        "total_units": 5788,
+        "on_time_units": 2870,
+        "effectiveness": 0.4959
+      },
+      "ATTA": {
+        "picklists": 14,
+        "total_units": 895,
+        "on_time_units": 685,
+        "effectiveness": 0.7654
+      },
+      "REB_FD_G0": {
+        "picklists": 3,
+        "total_units": 96,
+        "on_time_units": 81,
+        "effectiveness": 0.8438
+      },
+      "HVAL_APP_2": {
+        "picklists": 4,
+        "total_units": 35,
+        "on_time_units": 9,
+        "effectiveness": 0.2571
+      },
+      "SAMPLE": {
+        "picklists": 2,
+        "total_units": 4,
+        "on_time_units": 2,
+        "effectiveness": 0.5
+      },
+      "GOLD": {
+        "picklists": 6,
+        "total_units": 60,
+        "on_time_units": 0,
+        "effectiveness": 0.0
+      },
+      "combo_1": {
+        "picklists": 30,
+        "total_units": 552,
+        "on_time_units": 57,
+        "effectiveness": 0.1033
+      },
+      "FMCG_FOOD2": {
+        "picklists": 1,
+        "total_units": 2,
+        "on_time_units": 2,
+        "effectiveness": 1.0
+      },
+      "FRAGILE_FD": {
+        "picklists": 6,
+        "total_units": 925,
+        "on_time_units": 925,
+        "effectiveness": 1.0
+      },
+      "REB_G1_FD": {
+        "picklists": 2,
+        "total_units": 140,
+        "on_time_units": 140,
+        "effectiveness": 1.0
+      },
+      "HVAL_APPG1": {
+        "picklists": 3,
+        "total_units": 169,
+        "on_time_units": 169,
+        "effectiveness": 1.0
+      },
+      "CD_CICO": {
+        "picklists": 3,
+        "total_units": 1170,
+        "on_time_units": 1170,
+        "effectiveness": 1.0
+      },
+      "HNK_LARGE": {
+        "picklists": 1,
+        "total_units": 230,
+        "on_time_units": 230,
+        "effectiveness": 1.0
+      },
+      "M&S_2": {
+        "picklists": 1,
+        "total_units": 81,
+        "on_time_units": 81,
+        "effectiveness": 1.0
+      },
+      "combo_10": {
+        "picklists": 1,
+        "total_units": 54,
+        "on_time_units": 54,
+        "effectiveness": 1.0
+      },
+      "CICO_OIL": {
+        "picklists": 2,
+        "total_units": 576,
+        "on_time_units": 576,
+        "effectiveness": 1.0
+      },
+      "combo_6": {
+        "picklists": 1,
+        "total_units": 300,
+        "on_time_units": 300,
+        "effectiveness": 1.0
+      },
+      "DP+DB": {
+        "picklists": 2,
+        "total_units": 480,
+        "on_time_units": 480,
+        "effectiveness": 1.0
+      },
+      "DIAPERS": {
+        "picklists": 2,
+        "total_units": 354,
+        "on_time_units": 354,
+        "effectiveness": 1.0
+      },
+      "combo_7": {
+        "picklists": 1,
+        "total_units": 56,
+        "on_time_units": 56,
+        "effectiveness": 1.0
+      },
+      "CHOCOLATES": {
+        "picklists": 1,
+        "total_units": 525,
+        "on_time_units": 525,
+        "effectiveness": 1.0
+      }
+    },
+    "num_zones": 30
+  }
+}

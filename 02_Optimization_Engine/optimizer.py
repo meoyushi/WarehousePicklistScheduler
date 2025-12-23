@@ -23,7 +23,7 @@ from config import (
     INTERMEDIATE_DIR
 )
 
-from time_calculator import (
+from .time_calculator import (
     PicklistItem, Picklist, calculate_picklist_duration,
     calculate_picklist_duration_estimate, optimize_bin_order
 )
@@ -109,7 +109,7 @@ class PicklistOptimizer:
         pickers = []
         picker_id = 0
         
-        # Convert picking start time to minutes from midnight
+        # Convert picking start time to minutes from midnight (9PM = 21:00 = 1260 min)
         picking_start_minutes = PICKING_START_TIME.hour * 60 + PICKING_START_TIME.minute
         
         for shift_name, shift_config in PICKER_SHIFTS.items():
@@ -121,18 +121,25 @@ class PicklistOptimizer:
             start_minutes = start_time.hour * 60 + start_time.minute
             end_minutes = end_time.hour * 60 + end_time.minute
             
-            # Handle overnight shifts
+            # Handle overnight shifts (end time wraps to next day)
             if end_minutes < start_minutes:
                 end_minutes += 24 * 60
             
             # Adjust to picking start time reference (9PM = 0)
+            # For shifts starting before 9PM on the same operational day
             start_relative = start_minutes - picking_start_minutes
-            if start_relative < 0:
-                start_relative += 24 * 60  # Next day
-                
             end_relative = end_minutes - picking_start_minutes
-            if end_relative < 0:
-                end_relative += 24 * 60
+            
+            # If shift starts before picking time (e.g., 8PM shift when picking is 9PM)
+            # The picker can start at time 0 (when picking begins)
+            # If shift ends before picking starts, skip this shift for this day
+            if end_relative <= 0:
+                # Shift ends before picking starts - not available
+                continue
+            
+            # Shift start is before picking start - can begin at picking start (time 0)
+            if start_relative < 0:
+                start_relative = 0
             
             for _ in range(num_pickers):
                 picker = Picker(
